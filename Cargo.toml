@@ -22,5 +22,8 @@ shuttle-axum = "0.39.0"
 shuttle-runtime = { version = "0.39", default-features = false }
 serde = { version = "1.0.196", features = ["derive"] }
 shuttle-secrets = "0.39.0"
+sqlx = { version = "0.7.3", features = ["postgres"] }
+# note: need both postgres and sqlx
+shuttle-shared-db = { version = "0.39.0", features = ["postgres", "sqlx"] }
 [dev-dependencies]
 rstest    ="0.18"         # testing convenience proc-macros

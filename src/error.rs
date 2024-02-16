@@ -1,9 +1,7 @@
 //! cch23-13 error types
 // https://docs.rs/thiserror/latest/thiserror/
 
-use thiserror::Error;
-
-#[derive(Debug, Error)]
+#[derive(Debug, thiserror::Error)]
 pub enum MyError {
   // Derive Into<MyError> for io errors
   #[error("My Io error: {0}")]
